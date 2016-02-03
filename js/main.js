@@ -74,3 +74,7 @@ function handleCommand(command) {
 function createCommandUrl(command) {
     return baseApiUrl + '/' + currentVehicle.vehicle_id + urlCommand + command;
 }
+
+$( document ).ready(function() {
+    getAccessToken();
+});
