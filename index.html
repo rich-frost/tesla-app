@@ -4,13 +4,28 @@
     <title>Tesla App</title>
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
-<body>
+<body onload="getAccessToken()">
 <div class="page">
-    <img src="http://www.teslamotors.com/sites/all/themes/custom/tesla_theme/assets/img/icons/apple-touch-icon-152x152.png" alt="Tesla Logo"/>
+    <div class="tesla-logo"></div>
 
-    <button>Honk the Horn!</button>
-    <button>Turn on lights</button>
-    <button>Turn off lights</button>
+    <div class="panel input-panel">
+
+        <!-- TODO add actual auth login
+            <form onsubmit="return getAccessToken()">-->
+            <!--<input id="txtAccessTokenUrl" type="text" value="https://private-anon-b69a89784-timdorr.apiary-mock.com/"/>-->
+            <!--<input type="submit" value="Get Access Token"/>-->
+        <!--</form>-->
+        <label>Your selected car: </label><select id="yourCars"></select>
+    </div>
+
+    <button onclick="handleCommand('honk_horn')">Honk the Horn!</button>
+    <button onclick="handleCommand('flash_lights')">Flash Lights</button>
+    <button onclick="handleCommand('door_unlock')">Unlock Doors</button>
+    <button onclick="handleCommand('door_lock')">Lock Doors</button>
+    <div id="resultPanel" class="panel result-panel">
+        <h3>Results:</h3>
+        <div id="resultOutput"></div>
+    </div>
 </div>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script src="js/main.js"></script>

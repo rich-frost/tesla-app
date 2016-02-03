@@ -2,7 +2,17 @@ html, body, .page {
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
     background-color: #eee;
+}
+
+body, input {
+    font-family: 'Calibri',serif;
+}
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0 0 1em 0;
 }
 
 img, button {
@@ -10,11 +20,18 @@ img, button {
     display: block;
 }
 
+.tesla-logo {
+    background: transparent url("https://www.teslamotors.com/tesla_theme/assets/img/logo.svg?1") no-repeat center;
+    background-size: 200px 36px;
+    height: 1.8125rem;
+    display: block;
+    padding-top: 1rem;
+}
+
 button {
     cursor: pointer;
     padding: 0.2em 0.7em;
-    font-size: 1.8em;
-    font-family: 'Calibri',serif;
+    font-size: 1.4em;
     line-height: 1.8em;
     appearance: none;
     box-shadow: none;
@@ -41,4 +58,18 @@ button:active, button.active {
     background-color: #417cb8;
     box-shadow: 0 0.1em #27496d;
     transform: translateY(0.1em);
+}
+
+.panel {
+    margin: 2em;
+    padding: 2em;
+    text-align: center;
+}
+
+.input-panel {
+    padding: 0em;
+}
+
+.result-panel {
+    background: #fff;
 }
