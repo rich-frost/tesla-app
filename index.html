@@ -15,7 +15,13 @@
             <!--<input id="txtAccessTokenUrl" type="text" value="https://private-anon-b69a89784-timdorr.apiary-mock.com/"/>-->
             <!--<input type="submit" value="Get Access Token"/>-->
         <!--</form>-->
-        <label>Your selected car: </label><select id="yourCars"></select>
+        <p>
+            <label>Server env: </label>
+            <select id="serverEnv" onchange="updateEnvironment(this)"></select>
+        </p>
+        <p>
+            <label>Your selected car: </label><select id="yourCars"></select>
+        </p>
     </div>
 
     <button onclick="handleCommand('honk_horn')">Honk the Horn!</button>
